@@ -1,0 +1,531 @@
+{
+  "projectInfo": {
+    "applicationType": "default",
+    "defaultPackage": "io.hashimati",
+    "testFramework": "junit",
+    "sourceLanguage": "java",
+    "buildTool": "gradle",
+    "features": [
+      "annotation-api",
+      "app-name",
+      "aws-v2-sdk",
+      "graalvm",
+      "gradle",
+      "http-client",
+      "http-session",
+      "jackson-databind",
+      "java",
+      "java-application",
+      "junit",
+      "logback",
+      "micronaut-build",
+      "netty-server",
+      "object-storage-aws",
+      "problem-json",
+      "readme",
+      "shade",
+      "yaml",
+      "data-mongodb",
+      "mongo-sync",
+      "testcontainers",
+      "nats",
+      "cache-caffeine",
+      "management",
+      "micrometer",
+      "tracing-jaeger",
+      "graphql",
+      "openapi",
+      "lombok",
+      "security-annotations",
+      "security-jwt"
+    ]
+  },
+  "liquibaseSequence": 0,
+  "appName": "",
+  "databaseName": "MicrostarterExchange",
+  "databaseType": "MongoDB",
+  "dataBackendRun": "data-mongodb",
+  "messaging": "nats",
+  "graphQLIntegrationLib": "graphql-java-tools",
+  "framework": "micronaut",
+  "relationalDatabase": false,
+  "jaxRsAnnotation": false,
+  "micronautAnnotation": true,
+  "springBootAnnotation": false,
+  "enableViews": true,
+  "views": "views-thymeleaf",
+  "port": 8787,
+  "graphQlSupport": true,
+  "reactiveFramework": "reactor",
+  "serviceId": "MicrostarterExchange",
+  "discoveryClientEnabled": true,
+  "discoveryClient": "discovery-eureka",
+  "discoveryServer": "localhost",
+  "discoveryServerPort": "8761",
+  "configServerEnabled": false,
+  "grpcSupport": false,
+  "nonBlocking": false,
+  "micrometer": true,
+  "influx": false,
+  "prometheus": false,
+  "graphite": false,
+  "statsd": false,
+  "caffeine": true,
+  "gorm": false,
+  "securityEnable": true,
+  "securityStrategy": "jwt",
+  "securityJWTPropagate": false,
+  "monolithic": false,
+  "propagateServices": [],
+  "tracingFramework": "tracing-jaeger",
+  "tracingEnabled": true,
+  "mnData": true,
+  "javaVersion": "17",
+  "entities": [
+    {
+      "name": "WebService",
+      "idType": "String",
+      "entityPackage": "io.hashimati.domains",
+      "repoPackage": "io.hashimati.repositories",
+      "servicePackage": "io.hashimati.services",
+      "restPackage": "io.hashimati.controllers",
+      "clientPackage": "io.hashimati.clients",
+      "exceptionPackage": "io.hashimati.exceptions",
+      "exceptionHandlerPackage": "io.hashimati.exceptions",
+      "microstreamPackage": "io.hashimati.microstream",
+      "grpcPackage": "io.hashimati.grpc",
+      "graphqlpackage": "io.hashimati.graphqls",
+      "functionPackage": "io.hashimati.function",
+      "lambdaPackage": "io.hashimati.function.aws",
+      "oraclePackage": "io.hashimati.function.oracle",
+      "azurePackage": "io.hashimati.function.azure",
+      "googlePackage": "io.hashimati.function.google",
+      "defaultPackage": "io.hashimati",
+      "reactiveFramework": "reactor",
+      "databaseType": "MongoDB",
+      "collectionName": "webservices",
+      "databaseName": "MicrostarterExchange",
+      "gorm": false,
+      "frameworkType": "data-mongodb",
+      "microstreamChannelCount": 4,
+      "jaxRs": false,
+      "spring": false,
+      "micronaut": true,
+      "pageable": false,
+      "attributes": [
+        {
+          "name": "id",
+          "type": "String",
+          "premetive": true,
+          "enumuration": false,
+          "array": false,
+          "jdbc": false,
+          "jpa": false,
+          "findByMethod": false,
+          "findAllMethod": false
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "premetive": true,
+          "enumuration": false,
+          "array": false,
+          "jdbc": false,
+          "jpa": false,
+          "findByMethod": false,
+          "findAllMethod": false
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "premetive": true,
+          "enumuration": false,
+          "array": false,
+          "jdbc": false,
+          "jpa": false,
+          "findByMethod": false,
+          "findAllMethod": false
+        },
+        {
+          "name": "provider",
+          "type": "String",
+          "premetive": true,
+          "enumuration": false,
+          "array": false,
+          "jdbc": false,
+          "jpa": false,
+          "findByMethod": false,
+          "findAllMethod": true
+        },
+        {
+          "name": "rootUrl",
+          "type": "String",
+          "premetive": true,
+          "enumuration": false,
+          "array": false,
+          "jdbc": false,
+          "jpa": false,
+          "findByMethod": false,
+          "findAllMethod": false
+        },
+        {
+          "name": "documentation",
+          "type": "String",
+          "premetive": true,
+          "enumuration": false,
+          "array": false,
+          "jdbc": false,
+          "jpa": false,
+          "findByMethod": false,
+          "findAllMethod": false
+        }
+      ],
+      "liquibaseSequence": 0,
+      "nonBlocking": false,
+      "mnData": true,
+      "grpc": false,
+      "cached": false,
+      "micrometer": true,
+      "tracingEnabled": true,
+      "securityEnabled": false,
+      "securityStrategy": "jwt",
+      "noEndpoints": false,
+      "javaVersion": "17",
+      "javaRecord": false,
+      "updateByMethods": {},
+      "urls": [
+        {
+          "url": "/api/v1/webService/get",
+          "method": "GET",
+          "roles": []
+        },
+        {
+          "url": "/api/v1/webService/findAll",
+          "method": "GET",
+          "roles": []
+        },
+        {
+          "url": "/api/v1/webService/save",
+          "method": "POST",
+          "roles": []
+        },
+        {
+          "url": "/api/v1/webService/update",
+          "method": "PUT",
+          "roles": []
+        },
+        {
+          "url": "/api/v1/webService/delete/{id}",
+          "method": "DELETE",
+          "roles": []
+        },
+        {
+          "url": "/api/v1/webService/findAllByProvider",
+          "method": "DELETE",
+          "roles": []
+        }
+      ],
+      "lombok": true,
+      "graphQl": false
+    },
+    {
+      "name": "ScheduledTask",
+      "idType": "String",
+      "entityPackage": "io.hashimati.domains",
+      "repoPackage": "io.hashimati.repositories",
+      "servicePackage": "io.hashimati.services",
+      "restPackage": "io.hashimati.controllers",
+      "clientPackage": "io.hashimati.clients",
+      "exceptionPackage": "io.hashimati.exceptions",
+      "exceptionHandlerPackage": "io.hashimati.exceptions",
+      "microstreamPackage": "io.hashimati.microstream",
+      "grpcPackage": "io.hashimati.grpc",
+      "graphqlpackage": "io.hashimati.graphqls",
+      "functionPackage": "io.hashimati.function",
+      "lambdaPackage": "io.hashimati.function.aws",
+      "oraclePackage": "io.hashimati.function.oracle",
+      "azurePackage": "io.hashimati.function.azure",
+      "googlePackage": "io.hashimati.function.google",
+      "defaultPackage": "io.hashimati",
+      "reactiveFramework": "reactor",
+      "databaseType": "MongoDB",
+      "collectionName": "scheduledtasks",
+      "databaseName": "MicrostarterExchange",
+      "gorm": false,
+      "frameworkType": "data-mongodb",
+      "microstreamChannelCount": 4,
+      "jaxRs": false,
+      "spring": false,
+      "micronaut": true,
+      "pageable": false,
+      "attributes": [
+        {
+          "name": "id",
+          "type": "String",
+          "premetive": true,
+          "enumuration": false,
+          "array": false,
+          "jdbc": false,
+          "jpa": false,
+          "findByMethod": false,
+          "findAllMethod": false
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "premetive": true,
+          "enumuration": false,
+          "array": false,
+          "jdbc": false,
+          "jpa": false,
+          "findByMethod": true,
+          "findAllMethod": false
+        },
+        {
+          "name": "service",
+          "type": "String",
+          "premetive": true,
+          "enumuration": false,
+          "array": false,
+          "jdbc": false,
+          "jpa": false,
+          "findByMethod": false,
+          "findAllMethod": true
+        },
+        {
+          "name": "endpoint",
+          "type": "String",
+          "premetive": true,
+          "enumuration": false,
+          "array": false,
+          "jdbc": false,
+          "jpa": false,
+          "findByMethod": false,
+          "findAllMethod": true
+        },
+        {
+          "name": "freqeuncy",
+          "type": "String",
+          "premetive": true,
+          "enumuration": false,
+          "array": false,
+          "jdbc": false,
+          "jpa": false,
+          "findByMethod": false,
+          "findAllMethod": false
+        }
+      ],
+      "liquibaseSequence": 0,
+      "nonBlocking": false,
+      "mnData": true,
+      "grpc": false,
+      "cached": false,
+      "micrometer": true,
+      "tracingEnabled": true,
+      "securityEnabled": true,
+      "securityStrategy": "jwt",
+      "noEndpoints": false,
+      "javaVersion": "17",
+      "javaRecord": false,
+      "updateByMethods": {},
+      "urls": [
+        {
+          "url": "/api/v1/scheduledTask/get",
+          "method": "GET",
+          "roles": []
+        },
+        {
+          "url": "/api/v1/scheduledTask/findAll",
+          "method": "GET",
+          "roles": []
+        },
+        {
+          "url": "/api/v1/scheduledTask/save",
+          "method": "POST",
+          "roles": []
+        },
+        {
+          "url": "/api/v1/scheduledTask/update",
+          "method": "PUT",
+          "roles": []
+        },
+        {
+          "url": "/api/v1/scheduledTask/delete/{id}",
+          "method": "DELETE",
+          "roles": []
+        },
+        {
+          "url": "/api/v1/scheduledTask/findByName",
+          "method": "DELETE",
+          "roles": []
+        },
+        {
+          "url": "/api/v1/scheduledTask/findAllByService",
+          "method": "DELETE",
+          "roles": []
+        },
+        {
+          "url": "/api/v1/scheduledTask/findAllByEndpoint",
+          "method": "DELETE",
+          "roles": []
+        }
+      ],
+      "lombok": true,
+      "graphQl": false
+    },
+    {
+      "name": "Endpoint",
+      "idType": "String",
+      "entityPackage": "io.hashimati.domains",
+      "repoPackage": "io.hashimati.repositories",
+      "servicePackage": "io.hashimati.services",
+      "restPackage": "io.hashimati.controllers",
+      "clientPackage": "io.hashimati.clients",
+      "exceptionPackage": "io.hashimati.exceptions",
+      "exceptionHandlerPackage": "io.hashimati.exceptions",
+      "microstreamPackage": "io.hashimati.microstream",
+      "grpcPackage": "io.hashimati.grpc",
+      "graphqlpackage": "io.hashimati.graphqls",
+      "functionPackage": "io.hashimati.function",
+      "lambdaPackage": "io.hashimati.function.aws",
+      "oraclePackage": "io.hashimati.function.oracle",
+      "azurePackage": "io.hashimati.function.azure",
+      "googlePackage": "io.hashimati.function.google",
+      "defaultPackage": "io.hashimati",
+      "reactiveFramework": "reactor",
+      "databaseType": "MongoDB",
+      "collectionName": "endpoints",
+      "databaseName": "MicrostarterExchange",
+      "gorm": false,
+      "frameworkType": "data-mongodb",
+      "microstreamChannelCount": 4,
+      "jaxRs": false,
+      "spring": false,
+      "micronaut": true,
+      "pageable": false,
+      "attributes": [
+        {
+          "name": "id",
+          "type": "String",
+          "premetive": true,
+          "enumuration": false,
+          "array": false,
+          "jdbc": false,
+          "jpa": false,
+          "findByMethod": false,
+          "findAllMethod": false
+        },
+        {
+          "name": "url",
+          "type": "String",
+          "premetive": true,
+          "enumuration": false,
+          "array": false,
+          "jdbc": false,
+          "jpa": false,
+          "findByMethod": false,
+          "findAllMethod": false
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "premetive": true,
+          "enumuration": false,
+          "array": false,
+          "jdbc": false,
+          "jpa": false,
+          "findByMethod": false,
+          "findAllMethod": false
+        },
+        {
+          "name": "type",
+          "type": "String",
+          "premetive": true,
+          "enumuration": false,
+          "array": false,
+          "jdbc": false,
+          "jpa": false,
+          "findByMethod": false,
+          "findAllMethod": false
+        }
+      ],
+      "liquibaseSequence": 0,
+      "nonBlocking": false,
+      "mnData": true,
+      "grpc": false,
+      "cached": false,
+      "micrometer": true,
+      "tracingEnabled": true,
+      "securityEnabled": false,
+      "noEndpoints": false,
+      "javaVersion": "17",
+      "javaRecord": false,
+      "updateByMethods": {},
+      "urls": [
+        {
+          "url": "/api/v1/endpoint/get",
+          "method": "GET",
+          "roles": []
+        },
+        {
+          "url": "/api/v1/endpoint/findAll",
+          "method": "GET",
+          "roles": []
+        },
+        {
+          "url": "/api/v1/endpoint/save",
+          "method": "POST",
+          "roles": []
+        },
+        {
+          "url": "/api/v1/endpoint/update",
+          "method": "PUT",
+          "roles": []
+        },
+        {
+          "url": "/api/v1/endpoint/delete/{id}",
+          "method": "DELETE",
+          "roles": []
+        }
+      ],
+      "lombok": true,
+      "graphQl": false
+    }
+  ],
+  "relations": [],
+  "enums": [],
+  "configured": true,
+  "supportFileService": false,
+  "securityRoles": [
+    "ADMIN_ROLE",
+    "SERVER_ROLE"
+  ],
+  "urls": [
+    {
+      "scope": "/GraphQL",
+      "url": "/graphiql",
+      "method": "GET",
+      "roles": []
+    },
+    {
+      "scope": "/GraphQL",
+      "url": "/graphql",
+      "method": "POST",
+      "roles": []
+    },
+    {
+      "scope": "/OpenAPI",
+      "url": "/swagger/views/swagger-ui/index.html",
+      "method": "GET",
+      "roles": []
+    },
+    {
+      "scope": "/OpenAPI",
+      "url": "/swagger/views/rapidoc/index.html",
+      "method": "GET",
+      "roles": []
+    }
+  ],
+  "apikey": false,
+  "lombok": true
+}

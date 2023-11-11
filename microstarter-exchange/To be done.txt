@@ -1,0 +1,11 @@
+1. Test the Post.
+2.   Test the put.
+3. test the delete.
+4. test consuming a GET service.
+5. Test consuming a POST service.
+6. Test consuming a PUT service.
+7. Test consuming a DELETE service.
+8. Test consuming a GET service with parameters.
+9. Test consuming a POST service with JSON.
+10. Test consuming a PUT service  with Form.
+11. Develop a test view.

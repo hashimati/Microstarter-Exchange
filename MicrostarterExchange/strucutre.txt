@@ -1,0 +1,38 @@
+Web Service:
+{
+    "id": 1,
+    "name": "Web Service",
+    "description": "Web Service",
+  `"URL": "http://localhost:8080/"`,
+    "status": "ACTIVE",
+    "createdDate": "2020-07-07T00:00:00.000+0000",
+    "updatedDate": "2020-07-07T00:00:00.000+0000",
+    "createdBy": "admin",
+    "updatedBy": "admin",
+    "version": 0,
+    "deleted": false,
+    "deletedDate": null,
+    "deletedBy": null,
+    "deletedReason": null,
+    "deletedVersion": null,
+    "deletedStatus": null,
+    "deletedBy": null,
+    "deletedReason": null,
+    "deletedVersion": null,
+}
+
+Strategies:
+   the client can call the service using:
+    1. REST.
+    2. GRPC.
+    3. SOAP.
+    4. GraphQL.
+    5. WebSockets.
+    6. MQTT.
+    7. AMQP.
+    8. STOMP.
+    9. RSocket.
+    10. gRPC-Web.
+    11. Thrift.
+    12. Avro.
+    16. Evemt-bus.

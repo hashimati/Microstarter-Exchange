@@ -1,0 +1,76 @@
+plugins {
+    id("com.github.johnrengelman.shadow") version "7.1.2"
+    id("io.micronaut.application") version "3.7.9"
+}
+
+version = "0.1"
+group = "io.hashimati"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+	annotationProcessor("org.projectlombok:lombok")
+	annotationProcessor("io.micronaut.data:micronaut-data-document-processor")
+	annotationProcessor("io.micronaut.openapi:micronaut-openapi")
+	annotationProcessor("io.micronaut.security:micronaut-security-annotations")
+	compileOnly("org.projectlombok:lombok")
+	implementation("com.graphql-java-kickstart:graphql-java-tools:13.0.0")
+	implementation("io.micronaut.cache:micronaut-cache-caffeine")
+	implementation("io.micronaut.data:micronaut-data-mongodb")
+//	implementation("io.micronaut.discovery:micronaut-discovery-client")
+	implementation("io.micronaut.graphql:micronaut-graphql")
+	implementation("io.micronaut.micrometer:micronaut-micrometer-core")
+	implementation("io.micronaut.mongodb:micronaut-mongo-sync")
+//	implementation("io.micronaut.nats:micronaut-nats")
+	implementation("io.micronaut.reactor:micronaut-reactor")
+	implementation("io.micronaut.reactor:micronaut-reactor-http-client")
+	implementation("io.micronaut.security:micronaut-security-jwt")
+	implementation("io.micronaut.tracing:micronaut-tracing-jaeger")
+	implementation("io.micronaut.views:micronaut-views-thymeleaf")
+	implementation("io.micronaut:micronaut-management")
+	implementation("io.swagger.core.v3:swagger-annotations")
+    implementation 'io.vertx:vertx-core:4.4.2'
+    implementation 'io.vertx:vertx-web-client:4.4.2'
+    implementation 'io.vertx:vertx-service-proxy:4.4.2'
+    implementation 'org.apache.thrift:libthrift:0.18.1'
+	implementation("org.jasypt:jasypt:1.9.3")
+	testImplementation("org.testcontainers:junit-jupiter")
+	testImplementation("org.testcontainers:mongodb")
+	testImplementation("org.testcontainers:testcontainers")
+    annotationProcessor("io.micronaut:micronaut-http-validation")
+    compileOnly("org.graalvm.nativeimage:svm")
+    implementation 'com.squareup.okhttp3:okhttp:4.11.0'
+    implementation("io.micronaut.aws:micronaut-aws-sdk-v2")
+    implementation("io.micronaut.objectstorage:micronaut-object-storage-aws")
+    implementation("io.micronaut.problem:micronaut-problem-json")
+    implementation("io.micronaut:micronaut-http-client")
+    implementation("io.micronaut:micronaut-jackson-databind")
+    implementation("io.micronaut:micronaut-session")
+    implementation("jakarta.annotation:jakarta.annotation-api")
+    runtimeOnly("ch.qos.logback:logback-classic")
+}
+
+application {
+    mainClass.set("io.hashimati.Application")
+}
+java {
+    sourceCompatibility = JavaVersion.toVersion("17")
+    targetCompatibility = JavaVersion.toVersion("17")
+}
+
+graalvmNative.toolchainDetection = false
+micronaut {
+    runtime("netty")
+    testRuntime("junit5")
+    processing {
+        incremental(true)
+        annotations("io.hashimati.*")
+    }
+}
+
+tasks.withType(JavaCompile) {
+    options.fork = true
+    options.forkOptions.jvmArgs << '-Dmicronaut.openapi.views.spec=rapidoc.enabled=true,swagger-ui.enabled=true,swagger-ui.theme=flattop'
+}

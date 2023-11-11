@@ -1,0 +1,10 @@
+applicationType: default
+defaultPackage: io.hashimati
+testFramework: junit
+sourceLanguage: java
+buildTool: gradle
+features: [annotation-api, app-name, aws-v2-sdk, graalvm, gradle, http-client, http-session,
+  jackson-databind, java, java-application, junit, logback, micronaut-build, netty-server,
+  object-storage-aws, problem-json, readme, shade, yaml, data-mongodb, mongo-sync,
+  testcontainers, nats, cache-caffeine, management, micrometer, tracing-jaeger, graphql,
+  openapi, lombok, security-annotations, security-jwt]
